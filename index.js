@@ -194,7 +194,7 @@ class SortableFlatList extends Component {
       LayoutAnimation.configureNext(layoutAnimConfig);
       this.setState({ spacerIndex: nextSpacerIndex })
       this._spacerIndex = nextSpacerIndex
-      if (nextSpacerIndex === data.length) this._flatList.scrollToEnd()
+      if (nextSpacerIndex === data.length) ;
     }
 
     // Scroll if hovering in top or bottom of container and have set a scroll %
@@ -215,7 +215,7 @@ class SortableFlatList extends Component {
   }
 
   scroll = (scrollAmt, spacerIndex) => {
-    if (spacerIndex >= this.props.data.length) return this._flatList.scrollToEnd()
+    if (spacerIndex >= this.props.data.length) return null
     if (spacerIndex === -1) return
     const currentScrollOffset = this._scrollOffset
     const newOffset = currentScrollOffset + scrollAmt
